@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'charactor',
@@ -9,9 +9,15 @@ import { Component } from '@angular/core';
 })
 export class CharactorComponent {
 
+  @Input('cols') cols = 8;
+  @Input('rows') rows = 8;
+  @Input('tsize') tsize = 80;
+
+  rect_tile_pos = [1,1];
+
   rect_obj = {
-    pageX: 400,
-    pageY: 400
+    pageX: 0,
+    pageY: 0
   }
 
   point_obj = {
@@ -26,8 +32,13 @@ export class CharactorComponent {
 
   constructor() {
   }
+  ngOnChanges() {
+    this.rect_obj = {
+      pageX: this.rect_tile_pos[0]*this.tsize,
+      pageY: this.rect_tile_pos[1]*this.tsize
+    }
+  }
   move(ev) {
-    console.log(ev);
     this.point_obj.pageX = ev.pageX;
     this.point_obj.pageY = ev.pageY;
     this.line_obj.length = 

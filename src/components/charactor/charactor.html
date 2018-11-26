@@ -1,3 +1,11 @@
-<div class="charactor" [style.top]="rect_obj.pageY + 'px'" [style.left]="rect_obj.pageX + 'px'"></div>
-<div class="find-root" [style.width]="line_obj.length + 'px'" [style.transform]="'rotate(' + line_obj.deg + 'deg)'"></div>
+<div class="charactor"
+[style.top]="rect_obj.pageY + 'px'"
+[style.left]="rect_obj.pageX + 'px'"
+[style.width]="tsize + 'px'"
+[style.height]="tsize + 'px'"
+></div>
+<div class="find-root"
+[style.top]="rect_obj.pageY + (tsize/2) + 'px'"
+[style.left]="rect_obj.pageX + (tsize/2) + 'px'"
+[style.width]="line_obj.length + 'px'" [style.transform]="'rotate(' + line_obj.deg + 'deg)'"></div>
 <div class="point" [style.top]="point_obj.pageY + 'px'" [style.left]="point_obj.pageX + 'px'"></div>
