@@ -1,0 +1,19 @@
+map {
+    .tile-gird {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+    .tile-col {
+        position: absolute;
+        padding: 0;
+    }
+    .object {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}

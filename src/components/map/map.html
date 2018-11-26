@@ -1,0 +1,11 @@
+<div class="tile-grid"
+[style.width]="cols * tsize + 'px'" 
+[style.height]="rows * tsize + 'px'">
+  <div class="tile-col" *ngFor="let tile of tiles; let i = index;"
+  [style.left]="tsize * (i%cols) + 'px'" 
+  [style.top]="tsize * Math.floor(i/rows) + 'px'" 
+  [style.height]="tsize + 'px'"
+  [style.width]="tsize + 'px'">
+    <div class="object" [style.background-image]="'url(assets/imgs/map/'+(tindex[tile] ? tindex[tile] : '')+'.png)'"></div>
+  </div>
+</div>
